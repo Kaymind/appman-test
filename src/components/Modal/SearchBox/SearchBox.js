@@ -1,22 +1,22 @@
-import React, { useEffect, useState, useRef } from "react"
-import { useDispatch } from "react-redux"
-import { getSearchedPokedex } from "../../../redux/pokedex/pokedex.action"
-import styled from "styled-components"
+import React, { useEffect, useState, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { getSearchedPokedex } from '../../../redux/pokedex/pokedex.action';
+import styled from 'styled-components';
 
-import searchImg from "../../../assets/images/search.png"
+import searchImg from '../../../assets/images/search.png';
 
 const SearchBox = ({ className }) => {
-  const inputRef = useRef(null)
-  const [searchText, setSearchText] = useState("")
-  const dispatch = useDispatch()
+  const inputRef = useRef(null);
+  const [searchText, setSearchText] = useState('');
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setTimeout(() => {
-      if (searchText !== "" && inputRef.current !== searchText) {
-        dispatch(getSearchedPokedex(searchText))
+      if (searchText !== '' && inputRef.current !== searchText) {
+        dispatch(getSearchedPokedex(searchText));
       }
-    }, 1000)
-  }, [searchText, dispatch])
+    }, 1000);
+  }, [searchText, dispatch]);
 
   return (
     <div className={className}>
@@ -26,12 +26,12 @@ const SearchBox = ({ className }) => {
         placeholder="Find pokemon"
         className="search-input"
         value={searchText}
-        onChange={e => setSearchText(e.target.value)}
+        onChange={(e) => setSearchText(e.target.value)}
       />
       <img src={searchImg} className="search-image" alt="search-img" />
     </div>
-  )
-}
+  );
+};
 
 const SearchBoxStyled = styled(SearchBox)`
   position: relative;
@@ -55,6 +55,6 @@ const SearchBoxStyled = styled(SearchBox)`
     width: 50px;
     height: 50px;
   }
-`
+`;
 
-export { SearchBoxStyled as SearchBox }
+export { SearchBoxStyled as SearchBox };
