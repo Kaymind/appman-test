@@ -26,7 +26,7 @@ const transFormData = (itemToAdd) => {
         }, 0)
       : 0;
     const happiness = Math.round((hp / 10 + damage / 10 + 10 - weakness) / 5);
-
+    
     return {
       ...JSON.parse(JSON.stringify(item)),
       hp,
