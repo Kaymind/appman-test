@@ -9,7 +9,7 @@ const INITIAL_STATE = {
 
 const transFormData = (itemToAdd) => {
   const data = itemToAdd.map((item) => {
-    const hp = typeof item.hp === 'number' ? (+item.hp > 100 ? 100 : 0) : 0;
+    const hp = typeof item.hp === 'string' ? (+item.hp > 100 ? 100 : 0) : 0;
     const strength = item.attacks
       ? item.attacks.length * 50 >= 100
         ? 100
@@ -18,20 +18,20 @@ const transFormData = (itemToAdd) => {
     const weakness = item.weaknesses
       ? item.weaknesses.length * 50 >= 100
         ? 100
-        : 0
+        : (item.weaknesses.length * 50)
       : 0;
     const damage = item.attacks
       ? item.attacks.reduce((acc, cur) => {
           return acc + +cur.damage.match(/\d+/g);
         }, 0)
       : 0;
-    const happiness = Math.round((hp / 10 + damage / 10 + 10 - weakness) / 5);
+    const happiness = item.weaknesses ? Math.floor((hp / 10 + damage / 10 + 10 - item.weaknesses.length) / 5) : 0;
     
     return {
       ...JSON.parse(JSON.stringify(item)),
       hp,
-      strength,
-      weakness,
+      strength: `${strength}%`,
+      weakness: `${weakness}%`,
       damage,
       happiness,
     };

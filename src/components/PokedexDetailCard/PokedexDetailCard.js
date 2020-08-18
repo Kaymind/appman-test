@@ -10,7 +10,7 @@ const PokedexDetailCard = ({ className, pk }) => {
   const [hover, setHover] = useState(false)
   const dispatch = useDispatch()
   const isModalShow = useSelector(state => state.ui.isShow)
-  console.log(pk)
+  
   return (
     <div className={className} onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <div className="left-section">

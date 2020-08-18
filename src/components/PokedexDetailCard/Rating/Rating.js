@@ -3,7 +3,6 @@ import styled from "styled-components"
 import happinessIcon from "../../../assets/images/cute.png"
 
 const Rating = ({ className, happiness }) => {
-  console.log(new Array(happiness))
   return (
     <div className={className}>
       {[...new Array(happiness)].map((_, index) => (
