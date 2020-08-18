@@ -25,7 +25,7 @@ const transFormData = (itemToAdd) => {
           return acc + +cur.damage.match(/\d+/g);
         }, 0)
       : 0;
-    const happiness = item.weaknesses ? Math.floor((hp / 10 + damage / 10 + 10 - item.weaknesses.length) / 5) : 0;
+    const happiness = item.weaknesses ? Math.round((hp / 10 + damage / 10 + 10 - item.weaknesses.length) / 5) : 0;
     
     return {
       ...JSON.parse(JSON.stringify(item)),
