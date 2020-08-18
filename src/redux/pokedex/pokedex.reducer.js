@@ -30,8 +30,8 @@ const transFormData = (itemToAdd) => {
     return {
       ...JSON.parse(JSON.stringify(item)),
       hp,
-      strength: `${strength}%`,
-      weakness: `${weakness}%`,
+      strength,
+      weakness,
       damage,
       happiness,
     };
