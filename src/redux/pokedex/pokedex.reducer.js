@@ -9,7 +9,7 @@ const INITIAL_STATE = {
 
 const transFormData = (itemToAdd) => {
   const data = itemToAdd.map((item) => {
-    const hp = typeof item.hp === 'string' ? (+item.hp > 100 ? 100 : 0) : 0;
+    const hp = typeof item.hp === 'string' ? (+item.hp > 100 ? 100 : +item.hp) : 0;
     const strength = item.attacks
       ? item.attacks.length * 50 >= 100
         ? 100
