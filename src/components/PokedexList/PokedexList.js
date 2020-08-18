@@ -7,7 +7,7 @@ const PokedexList = ({ className, pokedexList }) => (
   <div className={className}>
     <div className="pokedex-list">
       {pokedexList.map(pk => (
-        <PokedexDetailCard key={pk.id} pk={pk} />
+        <PokedexDetailCard key={pk.id} pk={pk} className="my-pokedex-card"/>
       ))}
     </div>
   </div>
@@ -16,13 +16,24 @@ const PokedexList = ({ className, pokedexList }) => (
 const PokedexListStyled = styled(PokedexList)`
   > .pokedex-list {
     width: 100%;
-    height: 85vh;
+    height: calc(768px - 200px);
     overflow: scroll;
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px;
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }    
+
+    > .my-pokedex-card {
+      width: 49%;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+    }
   }
 `
 
