@@ -22,6 +22,7 @@ const PokedexListStyled = styled(PokedexList)`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start;
 
     ::-webkit-scrollbar {
       display: none;

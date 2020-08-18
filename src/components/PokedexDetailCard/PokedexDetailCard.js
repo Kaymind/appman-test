@@ -53,7 +53,7 @@ const PokedexDetailCardStyled = styled(PokedexDetailCard)`
 
   > .left-section {
     width: 30%;
-    max-width: 150px;
+    max-width: 120px;
 
     > .pokedex-image {
       width: 100%;

@@ -12,6 +12,7 @@ const PokedexBar = ({ className, label }) => (
 
 const PokedexBarStyled = styled(PokedexBar)`
   display: flex;
+  align-items: center;
   margin-bottom: 5px;
 
   > .label {
