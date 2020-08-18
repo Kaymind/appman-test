@@ -90,6 +90,9 @@ const pokedexReducer = (state = INITIAL_STATE, action) => {
         pokedexList: state.pokedexList.filter(
           (pk) => pk.id !== action.payload.id
         ),
+        searchedPokedexList: state.pokedexList.filter(
+          (pk) => pk.id !== action.payload.id
+        ),
         myPokedexList: [...state.myPokedexList, action.payload],
       };
     }
