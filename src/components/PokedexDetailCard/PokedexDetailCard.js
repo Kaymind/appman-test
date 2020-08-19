@@ -18,9 +18,9 @@ const PokedexDetailCard = ({ className, pk }) => {
       </div>
       <div className="right-section">
         <h2 className="title">{pk.name}</h2>
-        <PokedexBar label="hp" value={pk.hp} />
-        <PokedexBar label="str" value={pk.strength} />
-        <PokedexBar label="weak" value={pk.weakness} />
+        <PokedexBar label="HP" value={pk.hp} />
+        <PokedexBar label="STR" value={pk.strength} />
+        <PokedexBar label="WEAK" value={pk.weakness} />
         <Rating happiness={pk.happiness} />
       </div>
       {hover ? (
