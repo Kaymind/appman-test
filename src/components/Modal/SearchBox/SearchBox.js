@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { getSearchedPokedex } from '../../../redux/pokedex/pokedex.action';
+import { getSearchedPokedex, getPokedexList } from '../../../redux/pokedex/pokedex.action';
 import styled from 'styled-components';
 
 import searchImg from '../../../assets/images/search.png';
@@ -12,11 +12,15 @@ const SearchBox = ({ className }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (searchText !== '' && inputRef.current.value === searchText) {
-        dispatch(getSearchedPokedex(searchText));
+      if (inputRef.current.value === searchText) {
+        if(searchText !== '') {
+          dispatch(getSearchedPokedex(searchText));
+        } else {
+          dispatch(getPokedexList());
+        }
       }
-    }, 1000);
-  }, [searchText, dispatch]);
+    }, 500);
+  }, [searchText, dispatch, inputRef]);
 
   return (
     <div className={className}>
@@ -45,6 +49,7 @@ const SearchBoxStyled = styled(SearchBox)`
     border-radius: 10px;
     font-size: 2rem;
     font-family: Gaegu;
+    padding-right: 50px;
   }
 
   > .search-image {

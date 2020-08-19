@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import { closeAddModal } from "../../redux/ui/ui.action"
-import { clearSearchedPokedexList } from "../../redux/pokedex/pokedex.action"
+import { getPokedexList } from "../../redux/pokedex/pokedex.action"
 import styled from "styled-components"
 
 import { SearchBox } from "./SearchBox/SearchBox"
@@ -15,7 +15,7 @@ const Modal = ({ className }) => {
         className="overlay"
         onClick={() => {
           dispatch(closeAddModal())
-          dispatch(clearSearchedPokedexList())
+          dispatch(getPokedexList())
         }}></div>
       <div className="card">
         <SearchBox />

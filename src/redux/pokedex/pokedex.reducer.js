@@ -3,7 +3,6 @@ import * as pokedexActions from './pokedex.action';
 const INITIAL_STATE = {
   fetching: false,
   pokedexList: [],
-  searchedPokedexList: [],
   myPokedexList: [],
 };
 
@@ -48,23 +47,7 @@ const pokedexReducer = (state = INITIAL_STATE, action) => {
         fetching: !state.fetching,
       };
     }
-    case pokedexActions.GET_SEARCH_POKEDEX_SUCCESS: {
-      return {
-        ...state,
-        searchedPokedexList: transFormData(
-          action.payload.filter(
-            (item) => !state.myPokedexList.find((mPk) => mPk.id === item.id)
-          )
-        ),
-        fetching: false,
-      };
-    }
-    case pokedexActions.CLEAR_SEARCH_POKEDEX_LIST: {
-      return {
-        ...state,
-        searchedPokedexList: [],
-      };
-    }
+    case pokedexActions.GET_SEARCH_POKEDEX_SUCCESS:
     case pokedexActions.GET_POKEDEX_LIST_SUCCESS: {
       return {
         ...state,
@@ -88,9 +71,6 @@ const pokedexReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         pokedexList: state.pokedexList.filter(
-          (pk) => pk.id !== action.payload.id
-        ),
-        searchedPokedexList: state.pokedexList.filter(
           (pk) => pk.id !== action.payload.id
         ),
         myPokedexList: [...state.myPokedexList, action.payload],

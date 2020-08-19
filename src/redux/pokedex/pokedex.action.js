@@ -6,21 +6,19 @@ export const GET_POKEDEX_LIST_FAIL = 'GET_POKEDEX_LIST_FAIL';
 export const GET_SEARCH_POKEDEX_START = 'GET_SEARCH_POKEDEX_START';
 export const GET_SEARCH_POKEDEX_SUCCESS = 'GET_SEARCH_POKEDEX_SUCCESS';
 export const GET_SEARCH_POKEDEX_FAIL = 'GET_SEARCH_POKEDEX_FAIL';
-export const CLEAR_SEARCH_POKEDEX_LIST = 'CLEAR_SEARCH_POKEDEX_LIST';
 export const ADD_ITEM_TO_MY_POKEDEX_LIST = 'ADD_ITEM_TO_MY_POKEDEX_LIST';
-export const REMOVE_ITEM_FROM_MY_POKEDEX_LIST =
-  'REMOVE_ITEM_FROM_MY_POKEDEX_LIST';
+export const REMOVE_ITEM_FROM_MY_POKEDEX_LIST = 'REMOVE_ITEM_FROM_MY_POKEDEX_LIST';
 
-const getPokedexStart = () => ({
+export const getPokedexStart = () => ({
   type: GET_POKEDEX_LIST_START,
 });
 
-const getPokedexSucess = (payload) => ({
+export const getPokedexSucess = (payload) => ({
   type: GET_POKEDEX_LIST_SUCCESS,
   payload,
 });
 
-const getPokedexFail = (payload) => ({
+export const getPokedexFail = (payload) => ({
   type: GET_POKEDEX_LIST_FAIL,
   payload,
 });
@@ -35,22 +33,18 @@ export const getPokedexList = () => async (dispatch) => {
   }
 };
 
-const getSearchedPokedexStart = () => ({
+export const getSearchedPokedexStart = () => ({
   type: GET_SEARCH_POKEDEX_START,
 });
 
-const getSearchedPokedexSuccess = (payload) => ({
+export const getSearchedPokedexSuccess = (payload) => ({
   type: GET_SEARCH_POKEDEX_SUCCESS,
   payload,
 });
 
-const getSearchedPokedexFail = (payload) => ({
+export const getSearchedPokedexFail = (payload) => ({
   type: GET_SEARCH_POKEDEX_FAIL,
   payload,
-});
-
-export const clearSearchedPokedexList = () => ({
-  type: CLEAR_SEARCH_POKEDEX_LIST,
 });
 
 export const getSearchedPokedex = (search) => async (dispatch) => {
@@ -84,7 +78,7 @@ export const removeItemFromMyPokedexList = (payload) => async (dispatch) => {
   }
 };
 
-const removeItemFromMyPokedexListLocal = (itemToRemove) => ({
+export const removeItemFromMyPokedexListLocal = (itemToRemove) => ({
   type: REMOVE_ITEM_FROM_MY_POKEDEX_LIST,
   payload: itemToRemove,
 });
