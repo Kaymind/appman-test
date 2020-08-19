@@ -34,18 +34,6 @@ const ModalStyled = styled(Modal)`
     width: 100%;
     height: 100%;
     z-index: 999;
-
-    > .card {
-      width: 90%;
-      height: 90%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 10px;
-      z-index: 9999;
-      background-color: ${props => props.theme["Colorless"]};
-    }
   }
 
   > .card {
@@ -57,7 +45,7 @@ const ModalStyled = styled(Modal)`
     transform: translate(-50%, -50%);
     border-radius: 10px;
     z-index: 9999;
-    background-color: ${props => props.theme["Colorless"]};
+    background-color: ${props => props.theme["modalContentBackground"]};
   }
 `
 
