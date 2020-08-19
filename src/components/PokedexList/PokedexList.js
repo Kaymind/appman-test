@@ -1,17 +1,28 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getPokedexList } from "../../redux/pokedex/pokedex.action"
 import styled from "styled-components"
 
 import { PokedexDetailCard } from "../PokedexDetailCard/PokedexDetailCard"
 
-const PokedexList = ({ className, pokedexList }) => (
+const PokedexList = ({ className }) => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getPokedexList())
+  }, [dispatch])
+
+  const myPokedexList = useSelector(state => state.pokedex.myPokedexList)
+
+  return(
   <div className={className}>
     <div className="pokedex-list">
-      {pokedexList.map(pk => (
+      {myPokedexList.map(pk => (
         <PokedexDetailCard key={pk.id} pk={pk} className="my-pokedex-card"/>
       ))}
     </div>
   </div>
-)
+)}
 
 const PokedexListStyled = styled(PokedexList)`
   > .pokedex-list {
