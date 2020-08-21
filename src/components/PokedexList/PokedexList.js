@@ -43,7 +43,7 @@ const PokedexListStyled = styled(PokedexList)`
       width: 49%;
 
       &:last-child {
-        margin-bottom: 50px;
+        margin-bottom: 150px;
       }
     }
   }
