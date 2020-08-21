@@ -45,7 +45,7 @@ const SearchBoxStyled = styled(SearchBox)`
     width: 100%;
     height: 50px;
     outline: none;
-    border: 1px solid grey;
+    border: 1px solid ${props => props.theme['searchBoxBorder']};
     border-radius: 10px;
     font-size: 2rem;
     font-family: Gaegu;
