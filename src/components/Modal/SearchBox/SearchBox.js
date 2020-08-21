@@ -39,11 +39,13 @@ const SearchBox = ({ className }) => {
 
 const SearchBoxStyled = styled(SearchBox)`
   position: relative;
-  padding: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 10%;
 
   > .search-input {
     width: 100%;
-    height: 50px;
+    height: 100%;
     outline: none;
     border: 1px solid ${props => props.theme['searchBoxBorder']};
     border-radius: 10px;
@@ -57,8 +59,7 @@ const SearchBoxStyled = styled(SearchBox)`
     top: 50%;
     transform: translateY(-50%);
     right: 20px;
-    width: 50px;
-    height: 50px;
+    height: 80%;
   }
 `;
 

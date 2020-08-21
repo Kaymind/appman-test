@@ -13,18 +13,18 @@ const PokedexBar = ({ className, label }) => (
 const PokedexBarStyled = styled(PokedexBar)`
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
 
   > .label {
-    width: 40%;
+    width: 20%;
     max-width: 100px;
     margin-right: 10px;
+    font-size: 16px;
   }
 
   > .progress-bar {
-    max-width: 200px;
-    width: 50%;
-    height: 20px;
+    max-width: 300px;
+    width: 70%;
+    height: 24px;
     border: 1px solid ${props => props.theme["levelTubeBoxShadow"]};
     background-color: ${props => props.theme["levelTubeBackground"]};
     border-radius: 10px;

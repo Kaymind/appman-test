@@ -24,6 +24,7 @@ const Home = ({ className }) => {
 const HomeStyled = styled(Home)`
   > .title {
     text-align: center;
+    margin-bottom: 0;
   }
 `
 

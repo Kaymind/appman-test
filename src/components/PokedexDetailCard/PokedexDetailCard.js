@@ -41,7 +41,7 @@ const PokedexDetailCard = ({ className, pk }) => {
 const PokedexDetailCardStyled = styled(PokedexDetailCard)`
   display: flex;
   height: 200px;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   background-color: ${props => props.theme["cardBackground"]};
   margin-bottom: 20px;
@@ -53,6 +53,7 @@ const PokedexDetailCardStyled = styled(PokedexDetailCard)`
 
   > .left-section {
     width: 30%;
+    min-width: 105px;
     max-width: 120px;
 
     > .pokedex-image {
@@ -63,11 +64,19 @@ const PokedexDetailCardStyled = styled(PokedexDetailCard)`
 
   > .right-section {
     flex: 1;
-    padding: 10px;
+    padding: 10px 0 0 10px;
+    overflow: auto;
+
+    
+    ::-webkit-scrollbar {
+      display: none;
+    }  
 
     > .title {
       margin: 0;
       font-family: Gaegu;
+      font-size: 2rem;
+      text-transform: uppercase;
     }
   }
 

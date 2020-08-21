@@ -27,9 +27,9 @@ const PokedexList = ({ className }) => {
 const PokedexListStyled = styled(PokedexList)`
   > .pokedex-list {
     width: 100%;
-    height: calc(768px - 200px);
+    height: calc(768px - 150px);
     overflow: scroll;
-    padding: 20px;
+    padding: 10px 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

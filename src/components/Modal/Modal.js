@@ -27,7 +27,7 @@ const Modal = ({ className }) => {
 
 const ModalStyled = styled(Modal)`
   > .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: ${props => props.theme['modalOutside']};
     position: absolute;
     top: 0;
     right: 0;
@@ -38,8 +38,9 @@ const ModalStyled = styled(Modal)`
 
   > .card {
     width: 90%;
-    height: 90%;
+    height: 92%;
     position: absolute;
+    overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

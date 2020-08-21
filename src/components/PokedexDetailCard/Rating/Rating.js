@@ -6,7 +6,7 @@ const Rating = ({ className, happiness }) => {
   return (
     <div className={className}>
       {[...new Array(happiness)].map((_, index) => (
-        <img key={index} src={happinessIcon} height={20} alt="hapiness-img" className="happiness-icon" />
+        <img key={index} src={happinessIcon} height={38} alt="hapiness-img" className="happiness-icon" />
       ))}
     </div>
   )
@@ -14,9 +14,12 @@ const Rating = ({ className, happiness }) => {
 
 const RatingStyled = styled(Rating)`
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
 
   > .happiness-icon {
     margin-right: 2px;
+    margin-bottom: 2px;
   }
 `
 

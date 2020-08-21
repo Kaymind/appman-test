@@ -16,7 +16,7 @@ const PokedexCardList = ({ className }) => {
 }
 
 const PokedexCardListStyled = styled(PokedexCardList)`
-  height: 80%;
+  height: 90%;
   overflow: scroll;
   padding: 20px;
 `
