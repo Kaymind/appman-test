@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/appman-test/static/css/main.879ea0de.chunk.css",
-    "main.js": "/appman-test/static/js/main.1d55a716.chunk.js",
-    "main.js.map": "/appman-test/static/js/main.1d55a716.chunk.js.map",
+    "main.js": "/appman-test/static/js/main.3d98820a.chunk.js",
+    "main.js.map": "/appman-test/static/js/main.3d98820a.chunk.js.map",
     "runtime-main.js": "/appman-test/static/js/runtime-main.80a745a0.js",
     "runtime-main.js.map": "/appman-test/static/js/runtime-main.80a745a0.js.map",
     "static/js/2.7da89604.chunk.js": "/appman-test/static/js/2.7da89604.chunk.js",
     "static/js/2.7da89604.chunk.js.map": "/appman-test/static/js/2.7da89604.chunk.js.map",
     "index.html": "/appman-test/index.html",
-    "precache-manifest.747013c79c969e9747a7c67438501df1.js": "/appman-test/precache-manifest.747013c79c969e9747a7c67438501df1.js",
+    "precache-manifest.d1dcee0689296f7ce4569a4372a55079.js": "/appman-test/precache-manifest.d1dcee0689296f7ce4569a4372a55079.js",
     "service-worker.js": "/appman-test/service-worker.js",
     "static/css/main.879ea0de.chunk.css.map": "/appman-test/static/css/main.879ea0de.chunk.css.map",
     "static/js/2.7da89604.chunk.js.LICENSE": "/appman-test/static/js/2.7da89604.chunk.js.LICENSE",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.80a745a0.js",
     "static/js/2.7da89604.chunk.js",
     "static/css/main.879ea0de.chunk.css",
-    "static/js/main.1d55a716.chunk.js"
+    "static/js/main.3d98820a.chunk.js"
   ]
 }
