@@ -19,8 +19,8 @@ const SearchBox = ({ className }) => {
           dispatch(getPokedexList());
         }
       }
-      return () => clearTimeout(timer)
     }, 500);
+    return () => clearTimeout(timer)
   }, [searchText, dispatch, inputRef]);
 
   return (
