@@ -11,7 +11,7 @@ const SearchBox = ({ className }) => {
   const dispatch = useDispatch();
   
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (inputRef.current && inputRef.current.value === searchText) {
         if(searchText !== '') {
           dispatch(getSearchedPokedex(searchText));
@@ -19,6 +19,7 @@ const SearchBox = ({ className }) => {
           dispatch(getPokedexList());
         }
       }
+      return () => clearTimeout(timer)
     }, 500);
   }, [searchText, dispatch, inputRef]);
 
